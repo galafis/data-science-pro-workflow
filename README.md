@@ -1,5 +1,11 @@
 # data-science-pro-workflow
 
+[![CI/CD Pipeline](https://github.com/galafis/data-science-pro-workflow/actions/workflows/ci.yml/badge.svg)](https://github.com/galafis/data-science-pro-workflow/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/galafis/data-science-pro-workflow/branch/main/graph/badge.svg)](https://codecov.io/gh/galafis/data-science-pro-workflow)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Atribuição/Attribution: Todo o conteúdo deste repositório é de autoria de Gabriel Demetrios Lafis (@galafis).
 
 ---
@@ -73,25 +79,25 @@ Principais diferenciais:
 
 ## Como usar (rápido)
 
-Pré-requisitos:
+**Pré-requisitos:**
 - Python 3.10+
 - Docker (opcional, recomendado)
 - Poetry (ou pip)
 
-Instalação com Poetry:
-```
+**Instalação com Poetry:**
+```bash
 poetry install
 poetry shell
 pre-commit install
 ```
 
-Ou com pip:
-```
+**Ou com pip:**
+```bash
 pip install -r requirements.txt
 ```
 
-Rodar pipeline exemplo (Make + scripts):
-```
+**Rodar pipeline exemplo (Make + scripts):**
+```bash
 make data         # baixa/gera dados
 make features     # engenharia de features
 make train        # treina modelo
@@ -100,25 +106,27 @@ make api          # inicia API FastAPI
 make app          # inicia dashboard Streamlit
 ```
 
-Executar com Docker:
-```
+**Executar com Docker:**
+```bash
 docker compose up --build
 ```
 
 ## Tecnologias e Ferramentas
-- Linguagens: Python, R (Rmd para relatórios)
-- Análise/ML: pandas, numpy, scikit-learn, xgboost, lightgbm, pytorch/keras (exemplos)
-- Orquestração: Makefile, Prefect/Airflow (sugestões de DAG)
-- Versionamento de dados/experimentos: DVC, MLflow
-- APIs e Apps: FastAPI, Streamlit
-- Visualização: matplotlib, seaborn, plotly, Power BI (exemplos)
-- Qualidade: pytest, pre-commit (black, isort, flake8, mypy), coverage
-- Infra: Docker, docker-compose
-- CI/CD: GitHub Actions (lint, testes, build, deploy)
+
+- **Linguagens**: Python, R (Rmd para relatórios)
+- **Análise/ML**: pandas, numpy, scikit-learn, xgboost, lightgbm, pytorch/keras (exemplos)
+- **Orquestração**: Makefile, Prefect/Airflow (sugestões de DAG)
+- **Versionamento de dados/experimentos**: DVC, MLflow
+- **APIs e Apps**: FastAPI, Streamlit
+- **Visualização**: matplotlib, seaborn, plotly, Power BI (exemplos)
+- **Qualidade**: pytest, pre-commit (black, isort, flake8, mypy), coverage
+- **Infra**: Docker, docker-compose
+- **CI/CD**: GitHub Actions (lint, testes, build, deploy)
 
 ## Dados de Exemplo
-- Synthetic: geração controlada (sklearn.datasets, faker) para classificação e séries temporais
-- Reais (públicos):
+
+- **Synthetic**: geração controlada (sklearn.datasets, faker) para classificação e séries temporais
+- **Reais (públicos)**:
   - OpenML (via API)
   - UCI ML Repository (links)
   - APIs públicas (ex: dados financeiros/mercado, clima)
@@ -126,6 +134,7 @@ docker compose up --build
 Scripts e notebooks demonstram como baixar/limpar dados, garantir qualidade (Great Expectations/cerberus opcional) e versionar amostras.
 
 ## Exemplos Incluídos
+
 - Notebook EDA com análise estatística, outliers e correlações
 - Pipeline de classificação (fraude) com baseline, tuning e validação cruzada
 - API para previsão em lote e em tempo real
@@ -133,12 +142,14 @@ Scripts e notebooks demonstram como baixar/limpar dados, garantir qualidade (Gre
 - Exemplo de CI: lint + testes rodando em PRs
 
 ## Roadmap
+
 - [ ] Adicionar exemplos com Timeseries (Prophet/Statsmodels)
 - [ ] Treinamento distribuído (Spark/Ray) opcional
 - [ ] Modelo de NLP (BERT) para sentimento multilíngue
 - [ ] Monitoramento de drift e retraining automático
 
 ## Licença
+
 Ver LICENSE. Cite "Gabriel Demetrios Lafis (@galafis)" ao reutilizar.
 
 ---
@@ -147,7 +158,7 @@ Ver LICENSE. Cite "Gabriel Demetrios Lafis (@galafis)" ao reutilizar.
 
 A comprehensive, production-minded Data Science and Analytics workflow repository that covers end-to-end steps: data ingestion, EDA, feature engineering, modeling (ML/DL), evaluation, experiment tracking, MLOps (CI/CD), deployment, monitoring, and visualization. Market-oriented, with practical examples, best practices, and automation.
 
-Key highlights:
+**Key highlights:**
 - Modular, scalable layout (data, notebooks, pipelines, models, APIs, dashboards)
 - Professional standards (PEP8, pre-commit, tests, typing, docstrings)
 - Modern stack: Python, R, Docker, GitHub Actions, DVC/MLflow, FastAPI/Streamlit, Poetry, Makefile
@@ -155,25 +166,27 @@ Key highlights:
 - Instructional content targeting employability and portfolio impact
 
 ## Project Architecture
+
 (See tree above.)
 
 ## Quickstart
-Requirements: Python 3.10+, Docker (optional), Poetry or pip.
 
-Using Poetry:
-```
+**Requirements:** Python 3.10+, Docker (optional), Poetry or pip.
+
+**Using Poetry:**
+```bash
 poetry install
 poetry shell
 pre-commit install
 ```
 
-Using pip:
-```
+**Using pip:**
+```bash
 pip install -r requirements.txt
 ```
 
-Run sample pipeline:
-```
+**Run sample pipeline:**
+```bash
 make data
 make features
 make train
@@ -182,27 +195,30 @@ make api
 make app
 ```
 
-Docker:
-```
+**Docker:**
+```bash
 docker compose up --build
 ```
 
 ## Tech Stack
-- Languages: Python, R
-- Analytics/ML: pandas, numpy, scikit-learn, xgboost, lightgbm, pytorch/keras
-- Orchestration: Makefile, Prefect/Airflow
-- Data/Experiment versioning: DVC, MLflow
-- APIs & Apps: FastAPI, Streamlit
-- Visualization: matplotlib, seaborn, plotly, Power BI
-- Quality: pytest, pre-commit (black, isort, flake8, mypy), coverage
-- Infra: Docker, docker-compose
-- CI/CD: GitHub Actions
+
+- **Languages**: Python, R
+- **Analytics/ML**: pandas, numpy, scikit-learn, xgboost, lightgbm, pytorch/keras
+- **Orchestration**: Makefile, Prefect/Airflow
+- **Data/Experiment versioning**: DVC, MLflow
+- **APIs & Apps**: FastAPI, Streamlit
+- **Visualization**: matplotlib, seaborn, plotly, Power BI
+- **Quality**: pytest, pre-commit (black, isort, flake8, mypy), coverage
+- **Infra**: Docker, docker-compose
+- **CI/CD**: GitHub Actions
 
 ## Sample Data
+
 - Synthetic generators (sklearn.datasets, faker)
 - Public sources: OpenML API, UCI ML Repo, finance/weather APIs
 
 ## Included Examples
+
 - EDA notebook with stats, outliers, correlations
 - Fraud-like classification pipeline: baseline → hyperparameter tuning → cross-validation
 - Real-time and batch inference API
@@ -210,10 +226,12 @@ docker compose up --build
 - CI example for linting and tests on PRs
 
 ## Roadmap
+
 - [ ] Timeseries module (Prophet/Statsmodels)
 - [ ] Distributed training (Spark/Ray) optional
 - [ ] Multilingual sentiment (BERT)
 - [ ] Drift monitoring and automated retraining
 
 ## Author
+
 All content authored by Gabriel Demetrios Lafis (@galafis).
